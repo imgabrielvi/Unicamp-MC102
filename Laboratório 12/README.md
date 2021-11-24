@@ -28,15 +28,17 @@ Dizemos que um padrão (imagem a ser buscada) está contido em uma ``imagem A``,
 ***Flip*** é a operação que espelha uma imagem na horizontal ou na vertical. Considerando o *flip* horizontal, cada *pixel* ``p(x,y)`` da imagem resultante é igual ao *pixel* ``p'(x', y')`` da imagem original, sendo que ``x' = x`` e ``y' = m + 1 - y``, onde ``m`` é a quantidade de colunas. Já para o *flip* vertical, cada *pixel* ``p(x,y)`` da imagem resultante é igual ao *pixel* ``p'(x', y')`` da imagem original, sendo que ``x' = n + 1 - x`` e ``y' = y``, onde ``n`` é o número de linhas da imagem.
 
 A seguir exemplificamos as operações de *flip* horizontal e vertical. Os números na vertical e horizontal de cada imagem representam o número da linha e da coluna, respectivamente:
-[image] 
+
+![flip](https://user-images.githubusercontent.com/53866405/143323681-70eb92f8-f2c4-4b89-be4c-866bcdb01881.png)
 ## Rotação
 Nesta operação, o seu programa deve rotacionar uma imagem em 90 graus ou 180 graus em sentido horário. Note que rotacionar uma imagem em 180 graus é equivalente a aplicar a operação de rotação de 90 graus duas vezes.
 
 Dada uma ``imagem A`` de ``n`` linhas e ``m`` colunas, a imagem resultante ``B`` da rotação de 90 graus em ``A`` possui ``m`` linhas e ``n`` colunas, sendo que: a ``n``-ésima coluna de ``B`` é igual a primeira linha de ``A``; a ``(n-1)``-ésima coluna de ``B`` é igual a segunda linha de ``A``; e, de forma geral, a ``i``-ésima coluna de ``B`` é igual a ``(n+1)-i``-ésima linha de ``A``.
 
 A seguir exemplificamos as operações de rotação. Os números na vertical e horizontal de cada imagem representam o número da linha e da coluna, respectivamente:
-[image1]
-[image2]
+
+![rotacao_1](https://user-images.githubusercontent.com/53866405/143323677-611f48a5-99fd-4190-9248-51872dbde4b9.png)
+![rotacao_2](https://user-images.githubusercontent.com/53866405/143323683-d1e6de0f-1366-468e-89de-dff2dab6d2da.png)
 ## Entrada
 O seu programa receberá como entrada a ``imagem A`` e, em seguida, a ``imagem B``, ambas no formato PGM. Cada imagem terá as seguintes linhas (em ordem): uma linha contendo o valor ``P2``, que indica o formato do arquivo e **deve ser desconsiderada**; uma linha contendo dois números ``m`` e ``n``, que indicam o número de colunas e linhas da imagem, respectivamente; uma linha que contém o valor máximo que um *pixel* pode assumir (no nosso caso, esse valor sempre será 255); ``n`` linhas que possuem ``m`` valores inteiros separados por espaços, representando os valores de cada *pixel* da imagem em escala de cinza, na ordem *raster* (de cima para baixo, da esquerda para direita).
 ## Saída
