@@ -9,4 +9,5 @@ Neste laboratório, dados uma fita de DNA e um *primer*, o seu programa deve ind
 
 Como exemplo, dada a fita ``5ATAGTCTAGGATAGTCT3``, o *primer* ``5GAC3`` se liga nas posições 4 e 14 (considerando a primeira base do *primer*).
 
+
 ![dna_primer](https://user-images.githubusercontent.com/53866405/143316375-8ff30d53-d00d-48c5-9aed-1fb450e52c5c.png)
