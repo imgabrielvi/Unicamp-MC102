@@ -1,13 +1,13 @@
 # Cartões de Crédito
-Você começou a trabalhar no seu novo emprego em um grande banco. O seu chefe, que gosta de automatizar os processos burocráticos, pediu para que você fizesse um programa que, dadas as informações de score (pontuação) de crédito, idade, saldo da conta bancária e salário do cliente, decida se ele poderia ou não ganhar um novo cartão de crédito.
+Você começou a trabalhar no seu novo emprego em um grande banco. O seu chefe, que gosta de automatizar os processos burocráticos, pediu para que você fizesse um programa que, dadas as informações de *score* (pontuação) de crédito, idade, saldo da conta bancária e salário do cliente, decida se ele poderia ou não ganhar um novo cartão de crédito.
 
 Para ajudar na criação do programa, o seu chefe criou um diagrama para a concessão do crédito. A figura abaixo mostra o diagrama criado pelo seu chefe.
 
 ![arvore](https://user-images.githubusercontent.com/53866405/143297296-b75388e6-353f-4bad-88ab-a3b1a553e96c.jpg)
 
-Por exemplo, um cliente com um score de 825 pontos, 40 anos de idade, salário de R$ 1.500,00 e saldo de R$ 1.000,00, não deve receber um novo cartão de crédito. Da mesma forma, um cliente com um score de 530 pontos, 30 anos de idade, salário de R$ 3.500,00 e saldo de R$ 8.000,00, pode receber um novo cartão de crédito.
+Por exemplo, um cliente com um *score* de 825 pontos, 40 anos de idade, salário de R$ 1.500,00 e saldo de R$ 1.000,00, não deve receber um novo cartão de crédito. Da mesma forma, um cliente com um *score* de 530 pontos, 30 anos de idade, salário de R$ 3.500,00 e saldo de R$ 8.000,00, pode receber um novo cartão de crédito.
 
-A entrada do seu programa será composta por quatro linhas. As duas primeiras linhas contém valores inteiros, representando o score e a idade do cliente. As duas próximas linhas contém valores reais, indicando o saldo da conta e o salário do cliente.
+A entrada do seu programa será composta por quatro linhas. As duas primeiras linhas contém valores inteiros, representando o *score* e a idade do cliente. As duas próximas linhas contém valores reais, indicando o saldo da conta e o salário do cliente.
 
     <Score>
     <Idade>
