@@ -38,3 +38,4 @@ Portanto, a ordenação seguirá para a panqueca de diâmetro 2 e com apenas mai
 > 1 2 3 4 5 6 7
 
 Caso a sequência já esteja ordenada inicialmente, seu programa deverá imprimir ``Panquecas ja ordenadas`` e nenhuma operação deve ser feita.
+#
