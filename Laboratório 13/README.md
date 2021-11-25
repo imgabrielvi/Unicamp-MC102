@@ -29,7 +29,7 @@ Suponha que o algoritmo encontre a sequência da seguinte maneira:
 
 > 4 3 1 2 5 6 7
 
-onde a maior panqueca fora de posiçào (aquela com diâmetro 4) já está no topo da pilha, logo a inversão do passo 2 não deve ser realizada. Ao realizar a inversão do passo 3, que posicionará a panqueca com diâmetro 4 logo acima da panqueca de diâmetro 5, a panqueca com diâmetro 3 também será posicionada corretamente:
+Onde a maior panqueca fora de posiçào (aquela com diâmetro 4) já está no topo da pilha, logo a inversão do passo 2 não deve ser realizada. Ao realizar a inversão do passo 3, que posicionará a panqueca com diâmetro 4 logo acima da panqueca de diâmetro 5, a panqueca com diâmetro 3 também será posicionada corretamente:
 
 > 2 1 3 4 5 6 7
 
