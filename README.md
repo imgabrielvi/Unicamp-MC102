@@ -3,7 +3,7 @@
 
 Cada laboratório possui uma rotina programada com o nome "lab" seguido por seu respectivo número na extensão python.
 
-    Ex.: ``lab01.py``, ``lab02.py``, etc.
+> Ex.: ``lab01.py``, ``lab02.py``, etc.
 
 Cada rotina pode ser conferido por uma outra de nome ``testador.py``, que usa os demais arquivos no diretório como ***entrada*** ``arqXX.in``, conferindo com sua respectiva ***saída*** ``arqXX.out``.
 
