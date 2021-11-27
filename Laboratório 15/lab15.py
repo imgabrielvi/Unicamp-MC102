@@ -7,16 +7,16 @@
 
 def acao(lista, x, y):
     if lista[x][y] == 'H':
-        if y > (y - len(lista[x]) - 1): return (x, y + 1)
+        if y > (len(lista[x]) - 1 - y): return (x, y + 1)
         return (x, y - 1)
     elif lista[x][y] == 'V':
-        if x > (x - len(lista) - 1): return (x + 1, y)
+        if x > (len(lista) - 1 - x): return (x + 1, y)
         return (x - 1, y)
     elif lista[x][y] == 'T': 
         if x > y:
-            if y > (x - len(lista) - 1): return (x + 1, y)
+            if y > (len(lista) - 1 - x): return (x + 1, y)
             return (x, y - 1)
-        if x > (y - len(lista[x]) - 1): return (x, y + 1)
+        if x > (len(lista[x]) - 1 - y): return (x, y + 1)
         return (x - 1, y)
 def rota(x, y, lista):
     for i in range(len(lista)*len(lista[0])):
