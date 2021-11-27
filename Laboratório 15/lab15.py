@@ -16,14 +16,16 @@ def acao(lista, x, y):
         if x > y:
             if y > (x - len(lista) - 1): return (x + 1, y)
             return (x, y - 1)
+        if x > (y - len(lista[x]) - 1): return (x, y + 1)
+        return (x - 1, y)
 def rota(x, y, lista):
     for i in range(len(lista)*len(lista[0])):
         direcao = lista[x][y]
-        if direcao == 'N': return False
+        if direcao == 'N': return "Resgate aereo solicitado."
         x, y = acao(lista, x, y)
-        if x < 0 or x >= len(lista): return True
-        elif y < 0 or y >= len(lista[0]): return True
-    return True
+        if x < 0 or x >= len(lista): return "Fuga da cidade realizada."
+        elif y < 0 or y >= len(lista[0]): return "Fuga da cidade realizada."
+    return "Resgate aereo solicitado."
 mapa = []
 equipe = []
 l = input()
@@ -34,4 +36,4 @@ for i in range(int(l)): equipe.append(input().split())
 for i in range(len(equipe)):
     x = int(equipe[i][0])
     y = int(equipe[i][1])
-    fuga = rota(x, y, mapa)
+    print(rota(x, y, mapa))
