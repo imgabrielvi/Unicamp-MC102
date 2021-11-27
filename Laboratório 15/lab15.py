@@ -6,9 +6,16 @@
 ###################################################
 
 def acao(lista, x, y):
-    if lista[x][y] == 'H': ...
-    elif lista[x][y] == 'V': ...
-    elif lista[x][y] == 'T': ...
+    if lista[x][y] == 'H':
+        if y > (y - len(lista[x]) - 1): return (x, y + 1)
+        return (x, y - 1)
+    elif lista[x][y] == 'V':
+        if x > (x - len(lista) - 1): return (x + 1, y)
+        return (x - 1, y)
+    elif lista[x][y] == 'T': 
+        if x > y:
+            if y > (x - len(lista) - 1): return (x + 1, y)
+            return (x, y - 1)
 def rota(x, y, lista):
     for i in range(len(lista)*len(lista[0])):
         direcao = lista[x][y]
