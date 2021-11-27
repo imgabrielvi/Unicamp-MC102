@@ -6,26 +6,52 @@
 ###################################################
 
 def acao(lista, x, y):
+    way = 1
     if lista[x][y] == 'H':
-        if y > (len(lista[x]) - 1 - y): return (x, y + 1)
-        return (x, y - 1)
+        if y > (len(lista[x]) - 1 - y):
+            if y+way < len(lista[x]):
+                if lista[x][y+way] == 'N': way = way*(-1) 
+            return (x, y + way)
+        else:
+            if y-way:
+                if lista[x][y-way] == 'N': way = way*(-1)
+            return (x, y - 1)
     elif lista[x][y] == 'V':
-        if x > (len(lista) - 1 - x): return (x + 1, y)
-        return (x - 1, y)
+        if x > (len(lista) - 1 - x):
+            if x+way < len(lista):
+                if lista[x+way][y] == 'N': way = way*(-1)
+            return (x + way, y)
+        else:
+            if x-way:
+                if lista[x-way][y] == 'N': way = way*(-1)
+            return (x - way, y)
     elif lista[x][y] == 'T': 
         if x > y:
-            if y > (len(lista) - 1 - x): return (x + 1, y)
-            return (x, y - 1)
-        if x > (len(lista[x]) - 1 - y): return (x, y + 1)
-        return (x - 1, y)
+            if y > (len(lista) - 1 - x):
+                if x+way < len(lista):
+                    if lista[x+way][y] == 'N': way = way*(-1)
+                return (x + way, y)
+            else:
+                if y-way:
+                    if lista[x][y-way] == 'N': way = way*(-1)
+                return (x, y - way)
+        if x > (len(lista[x]) - 1 - y):
+            if y+way < len(lista[x]):
+                if lista[x][y+way] == 'N': way = way*(-1)
+            return (x, y + way)
+        else:
+            if x-way:
+                if lista[x-way][y] == 'N': way = way*(-1)
+            return (x - way, y)
+    return (x, y)
 def rota(x, y, lista):
+    if lista[x][y] == 'N': return "Resgate aereo solicitado."
     for i in range(len(lista)*len(lista[0])):
-        direcao = lista[x][y]
-        if direcao == 'N': return "Resgate aereo solicitado."
         x, y = acao(lista, x, y)
         if x < 0 or x >= len(lista): return "Fuga da cidade realizada."
         elif y < 0 or y >= len(lista[0]): return "Fuga da cidade realizada."
     return "Resgate aereo solicitado."
+way = int(1)
 mapa = []
 equipe = []
 l = input()
