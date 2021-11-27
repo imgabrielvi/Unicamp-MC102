@@ -6,7 +6,7 @@
 ###################################################
 
 def acao(lista, x, y):
-    way = 1
+    global way
     if lista[x][y] == 'H':
         if y > (len(lista[x]) - 1 - y):
             if y+way < len(lista[x]):
@@ -28,8 +28,10 @@ def acao(lista, x, y):
     elif lista[x][y] == 'T': 
         if x > y:
             if y > (len(lista) - 1 - x):
-                if x+way < len(lista):
-                    if lista[x+way][y] == 'N': way = way*(-1)
+                if x+way < len(lista) and lista[x+way][y] == 'N':
+                    if y-way and lista[x][y-way] == 'N':
+                        way = way*(-1)
+                    return (x, y-way)
                 return (x + way, y)
             else:
                 if y-way:
@@ -51,7 +53,7 @@ def rota(x, y, lista):
         if x < 0 or x >= len(lista): return "Fuga da cidade realizada."
         elif y < 0 or y >= len(lista[0]): return "Fuga da cidade realizada."
     return "Resgate aereo solicitado."
-way = int(1)
+way = int(-1)
 mapa = []
 equipe = []
 l = input()
@@ -63,3 +65,4 @@ for i in range(len(equipe)):
     x = int(equipe[i][0])
     y = int(equipe[i][1])
     print(rota(x, y, mapa))
+    way = -1
